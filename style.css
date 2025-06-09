@@ -18,16 +18,21 @@
     height: 50px;
 }
 
-.links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s;
+.navbar .links a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.links a:hover {
-    color: #ff5e5e;
+.navbar .links a:hover {
+  color: #ff4d4d; 
+}
+
+.navbar .links a.active {
+  color: #ff4d4d;
+  border-bottom: 2px solid #ff4d4d;
 }
 
 /* Hero section */
@@ -36,6 +41,45 @@
     text-align: center;
     color: white;
 }
+.hero_2{
+    position: relative;
+    text-align: center;
+}
+
+.hero_2 img {
+    width: 100%;
+    height: auto;
+    filter: brightness(60%);
+}
+
+.hero_2 h1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+}
+
+.hero_2 h3 {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    color: #fff;
+}
+
+.hero_2 p {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #ddd;
+}
+
+
 
 .hero_1 img {
     width: 100%;
@@ -458,3 +502,35 @@ html {
   font-size: 13px;
   color: #aaa;
 }
+
+
+/* Phones */
+@media (max-width: 600px) {
+  .product-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .product-grid {
+    display: block;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 993px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
