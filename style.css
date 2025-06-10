@@ -579,7 +579,7 @@ html {
   background-color: #e0e0e0;
 }
 
-.page-btn:active {
-  background-color: #8cffa5;
+.page-btn.active {
+  background-color: #0a9e43;
   color: white;
 }
